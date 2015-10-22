@@ -1,11 +1,13 @@
 var triangle = function(a,b,c){
-    if ((a === b) && (b === c)) {
+    if ((a + b +c) !== 180) {
+        return "unknown";
+    } else if ((a === b) && (b === c)) {
         return "equilateral";
     } else if ((a === c) && (a !== b) && (c !== b)) {
         return "isoceles";
     } else if ((a !== b) && (b !== c)) {
         return "scalene";
-    } else if ((a + b + c) !== 180) {
+    } else {
         return "unknown";
     }
 };
